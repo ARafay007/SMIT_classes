@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Promise</h1>
+
+    <script>
+        // constructor function
+        // const promise = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve('THis has been resolved');
+        //     }, 3000);
+
+        //     setTimeout(() => {
+        //         reject('This has been rejected');
+        //     }, 1500)
+        // });
+
+        // promise.then((data) => {
+        //     console.log(data);
+        // }).catch((error) => {
+        //     console.log(error);
+        // });
+
+        const promise = new Promise((resolve, reject) => {
+            const randomNum = Math.random();
+
+            setTimeout(() => {
+                if(randomNum > 0.5)
+                    resolve('THis has been resolved');
+                else
+                    reject('This has been rejected');
+            }, 3000);
+        });
+
+        promise.then((data) => {
+            console.log(data);
+        }).catch((error) => {
+            console.log(error);
+        });
+
+    </script>
+</body>
+
+</html>

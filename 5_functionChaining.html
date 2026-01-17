@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functional Chaining</h1>
+
+    <script>
+        const ary = [1,2,3,4,5,6];
+
+        // for(let i = 0; i< ary.length; i++){
+        //     ary[i] = ary[i] * 2;
+        // }
+
+        // console.log(ary);
+
+        // const ary2 = ary.map((el) => {
+        //     return el * 2;
+        // });
+
+        const filteredAry = ary.filter((el) => {
+            if(el % 2 === 0){
+                return el;
+            }
+        }).map((el) => {
+            return el * 2;
+        });
+
+        console.log(ary);
+        console.log(filteredAry);
+        console.log(ary2);
+        </script>
+</body>
+</html>
