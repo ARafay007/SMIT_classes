@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Destructing</h1>
+
+    <script>
+        const stdInClassXyz = {
+            name: 'Ahmed',
+            age: 18,
+            address: {
+                street: '10th Street',
+                city: 'Hyd'
+            },
+            subject: ['English', 'Urdu', 'Maths']
+        };
+
+        // DOT NOTATION
+        stdInClassXyz.address.street
+
+        // BRACKET NOTATION
+        stdInClassXyz['address']['city'];
+
+        // OBJECT DESTRUCTURING
+        let { name: stdName, age, address: {street} } = stdInClassXyz;
+
+        stdName = 'Shakeel';
+        console.log(stdName, street, age);
+        
+
+        const arry = [0, 1, 2, 3, 4, 5, 6];
+        arry[3];
+
+        // ARRAY DESTRUCTURING
+        // const [sunday, monday, tuesday,,,, saturday] = arry;
+        // console.log(sunday, monday, tuesday, saturday);
+        
+        const [,,, wednesday] = arry;
+        console.log(wednesday);
+        
+
+        function returnArray(){
+            // 
+            // 
+
+            return ['count', 'setCount'];
+        }
+
+        // const [count, setCount] = returnArray();
+        const catchArray = returnArray();
+
+        // console.log(count, setCount);
+        console.log(catchArray);
+    </script>
+</body>
+</html>
